@@ -11,7 +11,7 @@
                     <!-- <button>Upvote</button> -->
                 </div>
                 <div *ngIf="quote.showQuote">
-                    <app-quote-detail [quote]="quote"></app-quote-detail>
+                    <app-quote-detail *ngIf="quote.showQuote" [quote]="quote" (isComplete) = "deleteQuote($event,i)"></app-quote-detail>
                 </div>
                 <!-- <h5>{{quote.quote}}</h5>
                 <button>Add</button> -->
