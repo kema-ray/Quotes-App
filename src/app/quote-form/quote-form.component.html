@@ -1,1 +1,19 @@
-<p>quote-form works!</p>
+<div class="container-fluid">
+    <h2>Input a new Quote</h2>
+    <hr>
+    <form action="">
+        <div class="form-group">
+            <label for="name">Person's Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="quote">Quote</label>
+            <textarea class="form-control" id="quote" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" required>
+        </div>
+        <button type="submit" class="btn btn-success" id="post">Post Quote</button>
+    </form>
+</div>
