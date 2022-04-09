@@ -6,10 +6,23 @@
             <h4>Generated Quotes</h4>
             <div *ngFor="let quote of quotes; let i = index">
                 <div>
-                    <h6>{{quote.author}}</h6>
+                    <div *ngIf="quote.upvote == highest && quote.upvote > 1; then highlight else unhighlight"></div>
+                    <ng-template #highlight>
+                        <h6 appHighlight>{{quote.author}}</h6>
+                        <button (click)="showMore(i)" id="btn">Show More</button>
+                        <button appHighlight (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
+                        <button (click)="downVoteQuote(i)" id="btn">Downvote-{{quote.downvote}}</button>
+                    </ng-template>
+                    <ng-template #unhighlight>
+                        <h6>{{quote.author}}</h6>
+                        <button (click)="showMore(i)" id="btn">Show More</button>
+                        <button appHighlight (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
+                        <button (click)="downVoteQuote(i)" id="btn">Downvote-{{quote.downvote}}</button>
+                    </ng-template>
+                    <!-- <h6 appHighlight>{{quote.author}}</h6>
                     <button (click)="showMore(i)" id="btn">Show More</button>
-                    <button (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
-                    <button (click)="downVoteQuote(i)" id="btn">Downvote-{{quote.downvote}}</button>
+                    <button appHighlight (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
+                    <button (click)="downVoteQuote(i)" id="btn">Downvote-{{quote.downvote}}</button> -->
                 </div>
                 <div *ngIf="quote.showQuote">
                     <app-quote-detail *ngIf="quote.showQuote" [quote]="quote" (isComplete) = "deleteQuote($event,i)"></app-quote-detail>

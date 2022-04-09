@@ -22,6 +22,8 @@ export class QuoteComponent implements OnInit {
     var up = this.quotes[index].upvote+1;
     this.quotes[index].upvote=up;
   }
+  arr: number[] = this.quotes.map(quote=>quote.upvote)
+  highest = Math.max(...this.arr)
   downVoteQuote(index){
     var down = this.quotes[index].downvote+1;
     this.quotes[index].downvote=down;
