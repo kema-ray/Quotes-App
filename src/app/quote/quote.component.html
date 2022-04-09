@@ -8,7 +8,8 @@
                 <div>
                     <h6>{{quote.author}}</h6>
                     <button (click)="showMore(i)" id="btn">Show More</button>
-                    <!-- <button>Upvote</button> -->
+                    <button id="btn">Upvote</button>
+                    <button id="btn">Upvote</button>
                 </div>
                 <div *ngIf="quote.showQuote">
                     <app-quote-detail *ngIf="quote.showQuote" [quote]="quote" (isComplete) = "deleteQuote($event,i)"></app-quote-detail>

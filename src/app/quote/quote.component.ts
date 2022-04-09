@@ -11,8 +11,8 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(1, 'Lupita','Black Panther', 'Quote-Wakanda Forever',0,0),
     new Quote(2, 'Stephen King','Stephen King', 'Quote-Get busy living or get busy dying',0,0),
-    new Quote(3, 'Albert Eisten','Albert Eisten', 'If you want to live a happy life, tie it to a goal',0,0),
-    new Quote(4, 'Bill Gates','Bill Gates', 'Information technology and business are becoming inextricably interwoven. I do not think anybody can talk meaningfully about one without the talking about the other',0,0)
+    new Quote(3, 'Albert Eisten','Albert Eisten', 'Quote-If you want to live a happy life, tie it to a goal',0,0),
+    new Quote(4, 'Bill Gates','Bill Gates', 'Quote-Information technology and business are becoming inextricably interwoven. I do not think anybody can talk meaningfully about one without the talking about the other',0,0)
   ]
 
   showMore(index){
