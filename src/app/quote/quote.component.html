@@ -6,13 +6,17 @@
             <h4>Generated Quotes</h4>
             <div *ngFor="let quote of quotes; let i = index">
                 <div>
-                    <h5>{{quote.quote}}</h5>
-                    <button>Add</button>
+                    <h6>{{quote.author}}</h6>
+                    <button (click)="showMore(i)" id="btn">Show More</button>
+                    <!-- <button>Upvote</button> -->
+                </div>
+                <div *ngIf="quote.showQuote">
+                    <app-quote-detail [quote]="quote"></app-quote-detail>
                 </div>
                 <!-- <h5>{{quote.quote}}</h5>
                 <button>Add</button> -->
             </div>
-            <app-quote-detail></app-quote-detail>
+            <!-- <app-quote-detail></app-quote-detail> -->
         </div>
         <div class="col-md-6">
             <app-quote-form></app-quote-form>
