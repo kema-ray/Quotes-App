@@ -18,6 +18,14 @@ export class QuoteComponent implements OnInit {
   showMore(index){
     this.quotes[index].showQuote = !this.quotes[index].showQuote
   }
+  upVoteQuote(index){
+    var up = this.quotes[index].upvote+1;
+    this.quotes[index].upvote=up;
+  }
+  downVoteQuote(index){
+    var down = this.quotes[index].downvote+1;
+    this.quotes[index].downvote=down;
+  }
   deleteQuote(isComplete, index){
     if(isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
