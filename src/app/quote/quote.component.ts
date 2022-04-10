@@ -14,6 +14,9 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'Albert Eisten','Albert Eisten', 'Quote-If you want to live a happy life, tie it to a goal',0,0),
     new Quote(4, 'Bill Gates','Bill Gates', 'Quote-Information technology and business are becoming inextricably interwoven. I do not think anybody can talk meaningfully about one without the talking about the other',0,0)
   ]
+  preNum:number
+  lastNum:number
+  counter:number
 
   showMore(index){
     this.quotes[index].showQuote = !this.quotes[index].showQuote
@@ -27,6 +30,17 @@ export class QuoteComponent implements OnInit {
   downVoteQuote(index){
     var down = this.quotes[index].downvote+1;
     this.quotes[index].downvote=down;
+  }
+  highestUpvote(){
+    this.preNum = 0
+    this.lastNum =0
+    for(this.counter=0; this.counter < this.quotes.length;this.counter++){
+      this.lastNum=this.quotes[this.counter].upvote;
+      if(this.lastNum > this.preNum){
+        this.preNum=this.lastNum
+      }
+      return this.preNum;
+    }
   }
   deleteQuote(isComplete, index){
     if(isComplete) {

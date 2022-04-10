@@ -6,17 +6,18 @@
             <h4>Generated Quotes</h4>
             <div *ngFor="let quote of quotes; let i = index">
                 <div>
-                    <div *ngIf="quote.upvote == highest && quote.upvote > 1; then highlight else unhighlight"></div>
+                    <div *ngIf="highestUpvote()===quote.upvote && quote.upvote > 0; then highlight else unhighlight"></div>
+                    <div *ngIf=""></div>
                     <ng-template #highlight>
                         <h6 appHighlight>{{quote.author}}</h6>
                         <button (click)="showMore(i)" id="btn">Show More</button>
-                        <button appHighlight (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
+                        <button (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
                         <button (click)="downVoteQuote(i)" id="btn">Downvote-{{quote.downvote}}</button>
                     </ng-template>
                     <ng-template #unhighlight>
                         <h6>{{quote.author}}</h6>
                         <button (click)="showMore(i)" id="btn">Show More</button>
-                        <button appHighlight (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
+                        <button (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
                         <button (click)="downVoteQuote(i)" id="btn">Downvote-{{quote.downvote}}</button>
                     </ng-template>
                     <!-- <h6 appHighlight>{{quote.author}}</h6>
