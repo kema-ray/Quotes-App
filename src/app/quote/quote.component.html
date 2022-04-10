@@ -10,7 +10,7 @@
                     <div *ngIf="highestUpvote()===quote.upvote && quote.upvote > 0; then highlight else unhighlight"></div>
                     <div *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0"></div>
                     <ng-template #highlight>
-                        <h6 appHighlight>{{quote.author}}</h6>
+                        <h6 appHighlight>{{quote.author}}{{quote.publishDate|date|uppercase}}</h6>
                         <button (click)="showMore(i)" id="btn">Show More</button>
                         <button (click)="upVoteQuote(i)" id="btn">Upvote- {{quote.upvote}}</button>
                         <button (click)="downVoteQuote(i)" id="btn">Downvote-{{quote.downvote}}</button>
