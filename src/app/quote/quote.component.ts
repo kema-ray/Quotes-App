@@ -9,10 +9,10 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, 'Lupita','Black Panther', 'Wakanda Forever',0,0,new Date(2020,3,14)),
-    new Quote(2, 'Stephen King','Stephen King', 'Get busy living or get busy dying',0,0,new Date(2019,1,25)),
-    new Quote(3, 'Albert Eisten','Albert Eisten', 'If you want to live a happy life, tie it to a goal',0,0,new Date(2022,6,14)),
-    new Quote(4, 'Bill Gates','Bill Gates', 'Information technology and business are becoming inextricably interwoven. I do not think anybody can talk meaningfully about one without the talking about the other',0,0,new Date(2010,10,3))
+    new Quote(1, 'Lupita','Black Panther', 'Wakanda Forever',0,0,747,new Date(2020,3,14)),
+    new Quote(2, 'Stephen King','Stephen King', 'Get busy living or get busy dying',0,0,70,new Date(2022,1,25)),
+    new Quote(3, 'Albert Eisten','Albert Eisten', 'If you want to live a happy life, tie it to a goal',0,0,283,new Date(2021,6,14)),
+    new Quote(4, 'Bill Gates','Bill Gates', 'Information technology and business are becoming inextricably interwoven. I do not think anybody can talk meaningfully about one without the talking about the other',0,0,365,new Date(2021,4,10))
   ]
   // preNum:number
   // lastNum:number
