@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Hurricane&family=Poppins:wght@300;400;500;600&display=swap');
+#h4{
+    font-family: 'Beau Rivage', cursive;
+    text-align: center; 
+}
 #post{
     margin-top: 2%;
     margin-bottom: 4%;
