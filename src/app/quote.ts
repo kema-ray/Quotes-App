@@ -5,9 +5,9 @@ export class Quote {
         public name: string,
         public author: string,
         public quote: string,
-        // public publishDate: Date,
         public upvote: number,
-        public downvote: number
+        public downvote: number,
+        //public publishDate: Date,
         // public person: string
     ){
         this.showQuote=false;

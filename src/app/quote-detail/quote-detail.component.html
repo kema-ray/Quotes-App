@@ -1,11 +1,15 @@
-<p>{{quote.quote}}</p>
-<button (click)="quoteDelete(true)" class="btn btn-danger">Delete</button>
+<!-- <p>{{quote.quote}}</p> -->
+<!-- <button (click)="quoteDelete(true)" class="btn btn-danger">Delete</button> -->
+<p>
+    Quote:{{quote.quote}} 
+ </p>
+ <p>
+    Author:{{quote.author}} 
+ </p>
 <p>
    Upvote:{{quote.upvote}} 
 </p>
 <p>
     Downvote:{{quote.downvote}} 
- </p>
- <p>
-    Author:{{quote.author}} 
- </p>
+</p>
+ <button (click)="quoteDelete(true)" class="btn btn-danger">Delete</button>
