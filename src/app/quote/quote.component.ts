@@ -14,23 +14,27 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'Albert Eisten','Albert Eisten', 'Quote-If you want to live a happy life, tie it to a goal',0,0),
     new Quote(4, 'Bill Gates','Bill Gates', 'Quote-Information technology and business are becoming inextricably interwoven. I do not think anybody can talk meaningfully about one without the talking about the other',0,0)
   ]
-  preNum:number
-  lastNum:number
-  counter:number
+  // preNum:number
+  // lastNum:number
+  // counter:number
 
   showMore(index){
     this.quotes[index].showQuote = !this.quotes[index].showQuote
   }
   upVoteQuote(index){
-    var up = this.quotes[index].upvote+1;
-    this.quotes[index].upvote=up;
+    // var up = this.quotes[index].upvote+1;
+    this.quotes[index].upvote++;
   }
-  arr: number[] = this.quotes.map(quote=>quote.upvote)
-  highest = Math.max(...this.arr)
+  // arr: number[] = this.quotes.map(quote=>quote.upvote)
+  // highest = Math.max(...this.arr)
   downVoteQuote(index){
-    var down = this.quotes[index].downvote+1;
-    this.quotes[index].downvote=down;
+    // var down = this.quotes[index].downvote+1;
+    this.quotes[index].downvote++;
   }
+
+  preNum:number
+  lastNum:number
+  counter:number
   highestUpvote(){
     this.preNum = 0
     this.lastNum =0

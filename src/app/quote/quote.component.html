@@ -8,7 +8,7 @@
             <div *ngFor="let quote of quotes; let i = index">
                 <div>
                     <div *ngIf="highestUpvote()===quote.upvote && quote.upvote > 0; then highlight else unhighlight"></div>
-                    <div *ngIf=""></div>
+                    <div *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0"></div>
                     <ng-template #highlight>
                         <h6 appHighlight>{{quote.author}}</h6>
                         <button (click)="showMore(i)" id="btn">Show More</button>
