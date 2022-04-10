@@ -30,9 +30,6 @@ Find inspiring quotes that will cheer you up.
 - Use this command `git clone *` to clone the project.
 - Run ng serve -o from your terminal
 
-## Live Demo
-To view the page click on the link below
-* [link]
 
 ## Known Bugs
 - There are no known bugs currently. The page works as expected.
